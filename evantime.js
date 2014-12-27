@@ -1,7 +1,7 @@
 function evanTime() {
 	var bodyCSS = {
-		"background": "url(http://giant.gfycat.com/RichUglyBarnowl.gif) no-repeat center center fixed",
-		"background-size": "cover"	
+		"background": "url(http://giant.gfycat.com/RichUglyBarnowl.gif) repeat-y center center",
+		"background-size": "contain"	
 	}
 
 	function convertBackground(elementArray) {
@@ -34,7 +34,7 @@ function evanTime() {
 	}
 
 	$("body").css(bodyCSS);
-	convertBackground($("div"));
+	convertBackground($("body").find("*"));
 };
 
 evanTime();
