@@ -3,7 +3,7 @@
 
   "name": "Evan Time",
   "description": "Makes the background of your webpage infinitely happier.",
-  "version": "1.0",
+  "version": "2.0",
 
   "permissions": [
     "activeTab",
