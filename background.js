@@ -17,20 +17,10 @@ function executeScripts(tabId, injectDetailsArray)
 
 
 chrome.browserAction.onClicked.addListener(function(tab){
-  console.log('EVAN TIME!!!');
-  chrome.storage.local.get("evantime", function(result){ 
-    if (!result.evantime) {
-    	chrome.storage.local.set({"evantime": true});
-    	executeScripts(null, [
-    	{ file: "jquery-1.11.1.min.js" },
-    	{ file: "evantime.js" }
-    	]);
-    } else {
-      chrome.storage.local.set({"evantime": false});
-    	chrome.tabs.executeScript({
-    		code: "location.reload();"
-    	});
-    }
-  });
+    console.log('EVAN TIME!!!');
+    executeScripts(null, [
+        { file: "jquery-1.11.1.min.js" },
+        { file: "evantime.js" }
+    ]);
   
 });

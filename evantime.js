@@ -1,7 +1,8 @@
 function evanTime() {
+	var body = $("body");
 	var bodyCSS = {
-		"background": "url(http://giant.gfycat.com/RichUglyBarnowl.gif) repeat-y center center",
-		"background-size": "contain"	
+		"background": "url(https://giant.gfycat.com/RichUglyBarnowl.gif) repeat-y center center",
+		"background-size": "contain"
 	}
 
 	function convertBackground(elementArray) {
@@ -33,8 +34,13 @@ function evanTime() {
 		});
 	}
 
-	$("body").css(bodyCSS);
-	convertBackground($("body").find("*"));
+	if (!body.hasClass("evanTime")) {
+		$("body").addClass("evanTime").css(bodyCSS);
+		convertBackground(body.find("*"));
+	} else {
+		location.reload();
+	}
+	
 };
 
 evanTime();
